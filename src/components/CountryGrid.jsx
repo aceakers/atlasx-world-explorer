@@ -1,37 +1,21 @@
 import CountryCard from './CountryCard'
 
-function CountryGrid({ search }) {
-  const countries = [
-    {
-      name: 'Brasil',
-      capital: 'Brasília',
-      region: 'Américas',
-      flag: 'https://flagcdn.com/w320/br.png',
-    },
-    {
-      name: 'Japão',
-      capital: 'Tóquio',
-      region: 'Ásia',
-      flag: 'https://flagcdn.com/w320/jp.png',
-    },
-    {
-      name: 'França',
-      capital: 'Paris',
-      region: 'Europa',
-      flag: 'https://flagcdn.com/w320/fr.png',
-    },
-  ]
-
-  const filteredCountries = countries.filter((country) =>
-  country.name.toLowerCase().includes(search.toLowerCase())
-)
+function CountryGrid({ countries, onDetails }) {
+  if (countries.length === 0) {
+    return (
+      <p className="no-results">
+        Nenhum país encontrado.
+      </p>
+    )
+  }
 
   return (
     <div className="country-grid">
-      {filteredCountries.map((country) => (
+      {countries.map((country) => (
         <CountryCard
-          key={country.name}
+          key={country.names.common}
           country={country}
+          onDetails={onDetails}
         />
       ))}
     </div>
