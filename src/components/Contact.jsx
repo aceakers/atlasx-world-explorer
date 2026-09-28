@@ -1,43 +1,59 @@
 function Contact() {
   return (
-    <section id="contato">
-      <h2>Entre em contato</h2>
+    <section id="contato" className="contact">
+      <div className="contact-content">
+        <div className="contact-header">
+          <span className="section-label">
+            CONTATO
+          </span>
 
-      <p>
-        Tem alguma sugestão, dúvida ou encontrou algum problema?
-      </p>
+          <h2>
+            Tem alguma sugestão?
+          </h2>
 
-      <form>
-        <div>
-          <label htmlFor="name">Nome</label>
-          <input
-            id="name"
-            type="text"
-            placeholder="Seu nome"
-          />
+          <p>
+            Envie uma mensagem e ajude a melhorar o AtlasX.
+          </p>
         </div>
 
-        <div>
-          <label htmlFor="email">E-mail</label>
-          <input
-            id="email"
-            type="email"
-            placeholder="seu@email.com"
-          />
-        </div>
+        <form className="contact-form">
+          <div className="form-row">
+            <div className="form-group">
+              <label htmlFor="name">Nome</label>
 
-        <div>
-          <label htmlFor="message">Mensagem</label>
-          <textarea
-            id="message"
-            placeholder="Escreva sua mensagem..."
-          />
-        </div>
+              <input
+                id="name"
+                type="text"
+                placeholder="Seu nome"
+              />
+            </div>
 
-        <button type="submit">
-          Enviar mensagem
-        </button>
-      </form>
+            <div className="form-group">
+              <label htmlFor="email">E-mail</label>
+
+              <input
+                id="email"
+                type="email"
+                placeholder="seu@email.com"
+              />
+            </div>
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="message">Mensagem</label>
+
+            <textarea
+              id="message"
+              placeholder="Escreva sua mensagem..."
+              rows="5"
+            />
+          </div>
+
+          <button type="submit" className="contact-button">
+            Enviar mensagem
+          </button>
+        </form>
+      </div>
     </section>
   )
 }

@@ -1,15 +1,35 @@
 function Hero() {
   return (
-    <section id="inicio">
-      <h2>Explore o mundo</h2>
+    <section id="inicio" className="hero">
+      <div className="hero-content">
+        <div className="hero-text">
+          <span className="hero-label">
+            WORLD EXPLORER
+          </span>
 
-      <p>
-        Descubra países, regiões, culturas e informações ao redor do mundo.
-      </p>
+          <h2>
+            Explore o mundo.
+            <br />
+            <span>Descubra novos lugares.</span>
+          </h2>
 
-      <a href="#explorar">
-        Explorar países
-      </a>
+          <p>
+            Descubra países, regiões, culturas e informações
+            sobre diferentes lugares do mundo.
+          </p>
+
+          <a href="#explorar" className="hero-button">
+            Explorar países
+          </a>
+        </div>
+
+        <div className="hero-visual">
+          <img
+            src="/atlasx-logo.png"
+            alt="AtlasX"
+          />
+        </div>
+      </div>
     </section>
   )
 }

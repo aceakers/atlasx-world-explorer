@@ -1,34 +1,35 @@
 function Footer() {
   return (
-    <footer>
-      <div>
-        <h2>AtlasX</h2>
+    <footer className="footer">
+      <div className="footer-content">
 
-        <p>
-          Explore o mundo, um país de cada vez.
-        </p>
+        <div className="footer-brand">
+          <a href="#inicio" className="footer-logo">
+            Atlas<span>X</span>
+          </a>
+
+          <p>
+            Explore o mundo, um país de cada vez.
+          </p>
+        </div>
+
+        <nav className="footer-navigation">
+          <a href="#inicio">Início</a>
+          <a href="#explorar">Explorar</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#contato">Contato</a>
+        </nav>
+
       </div>
 
-      <nav>
-        <h3>Navegação</h3>
-
-        <a href="#inicio">Início</a>
-        <a href="#explorar">Explorar</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#contato">Contato</a>
-      </nav>
-
-      <div>
-        <h3>AtlasX</h3>
+      <div className="footer-bottom">
+        <p>
+          © 2026 AtlasX. Todos os direitos reservados.
+        </p>
 
         <p>
-          Projeto desenvolvido para explorar informações sobre países
-          utilizando uma API pública.
+          World Explorer
         </p>
-      </div>
-
-      <div>
-        <p>© 2026 AtlasX. Todos os direitos reservados.</p>
       </div>
     </footer>
   )
