@@ -1,20 +1,16 @@
-const API_URL = 'https://api.restcountries.com/countries/v5'
+const API_URL = '/api/countries'
 
 export async function getCountries(
   page = 1,
   search = '',
   region = ''
 ) {
-  const limit = 12
-  const offset = (page - 1) * limit
-
   const params = new URLSearchParams({
-    limit,
-    offset,
+    page,
   })
 
   if (search) {
-    params.append('q', search)
+    params.append('search', search)
   }
 
   if (region) {
@@ -22,12 +18,7 @@ export async function getCountries(
   }
 
   const response = await fetch(
-    `${API_URL}?${params.toString()}`,
-    {
-      headers: {
-        Authorization: `Bearer ${import.meta.env.VITE_REST_COUNTRIES_API_KEY}`,
-      },
-    }
+    `${API_URL}?${params.toString()}`
   )
 
   if (!response.ok) {
